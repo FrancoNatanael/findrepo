@@ -8,15 +8,15 @@ import {
     CardHeader,
     CardTitle,
 } from "@/components/ui/card"
-import { Eye, Github, Star } from "lucide-react"
+import { Bookmark, Eye, Github, Star } from "lucide-react"
 import Link from "next/link"
 
   
-export default function RepoCard({repository} : {repository: Repository}){
-    return <div className="w-[30%] min-w-[265px]">
+export default function RepoCard({repository, save} : {repository: Repository, save: (id: number) => void}){
+    return <div className="w-[30%] min-w-[300px]">
         <Card>
         <CardHeader>
-            <div className="flex">
+            <div className="flex relative">
                 <Avatar>
                     <AvatarImage src={repository.owner.avatar_url} />
                     <AvatarFallback>AVATAR</AvatarFallback>
@@ -24,6 +24,9 @@ export default function RepoCard({repository} : {repository: Repository}){
                 <div className="ml-3">
                     <CardTitle>{repository.name}</CardTitle>
                     <CardDescription>by {repository.owner.login}</CardDescription>
+                </div>
+                <div className="self-start absolute right-0">
+                    <Bookmark width={20} strokeWidth={1.5}></Bookmark>
                 </div>
             </div>
         </CardHeader>
