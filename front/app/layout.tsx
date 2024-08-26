@@ -7,6 +7,9 @@ const inter = Inter({ subsets: ["latin"] });
 export const metadata: Metadata = {
   title: "findrepo",
   description: "Find GitHub repo by interests",
+  icons: {
+    icon: './icon.png'
+  }
 };
 
 export default function RootLayout({
