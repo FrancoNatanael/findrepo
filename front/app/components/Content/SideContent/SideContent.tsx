@@ -7,9 +7,14 @@ import {
     SelectTrigger,
     SelectValue,
 } from "@/components/ui/select"
-import { Dispatch, SetStateAction } from "react"
+import { Dispatch, SetStateAction, useEffect } from "react"
 
 export default function SideContent({setLanguage} : {setLanguage: Dispatch<SetStateAction<string>>}){
+
+    useEffect(() => {
+        setLanguage("javascript")
+    }, [])
+
     return <div className="w-fit flex flex-col">
         <h2 className="font-bold text-2xl">Explore</h2>
         <p className="opacity-80">Browse repositories by category</p>
