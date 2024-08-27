@@ -1,7 +1,12 @@
+'use client'
+
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 
 export default function NavBar(){
+    const router = useRouter()
+
     return <nav className="flex justify-between content-center">
         <Link href={'/'}>
             <p className="font-semibold italic">.findrepo</p>
@@ -13,9 +18,9 @@ export default function NavBar(){
             <Link href={'/'}>Bookmarks</Link>
         </ul>
 
-        <Avatar>
-            <AvatarImage src="https://github.com/shadcn.png" />
-            <AvatarFallback>AVATAR</AvatarFallback>
+        <Avatar onClick={() => router.push('/login')} className="cursor-pointer">
+            <AvatarImage src="https://github.com/shadcn.png" className=""/>
+            <AvatarFallback>AV</AvatarFallback>
         </Avatar>
 
     </nav>

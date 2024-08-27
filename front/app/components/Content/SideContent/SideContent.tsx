@@ -37,7 +37,7 @@ export default function SideContent({setFilterObject} : {setFilterObject: Dispat
                     <SelectContent>
                         <SelectItem value="javascript">Javascript</SelectItem>
                         <SelectItem value="typescript">Typescript</SelectItem>
-                        <SelectItem value="c#">C#</SelectItem>
+                        <SelectItem value="csharp">C#</SelectItem>
                         <SelectItem value="python">Python</SelectItem>
                         <SelectItem value="java">Java</SelectItem>
                         <SelectItem value="c++">C++</SelectItem>
