@@ -13,7 +13,7 @@ import Link from "next/link"
 
   
 export default function RepoCard({repository, save} : {repository: Repository, save: (id: number) => void}){
-    return <div className="w-[30%] min-w-[300px] flex flex-col">
+    return <div className="w-[32%] min-w-[300px] flex flex-col">
         <Card className="flex flex-col flex-grow flex-shrink basis-auto">
         <CardHeader>
             <div className="flex relative">
