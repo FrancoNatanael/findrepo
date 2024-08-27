@@ -1,6 +1,6 @@
-#findrepo :sunglasses:
+# Findrepo :sunglasses:
 
-###find GitHub repos by criteria
+### Find GitHub repos by criteria
 
 Find GitHub repositories by programming language, keywords into repository description or name, login and save repository to watch later or use as a reference
 
