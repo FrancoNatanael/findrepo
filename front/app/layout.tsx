@@ -20,7 +20,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`py-6 w-[80%] m-auto ${inter.className}`}>
+      <body className={`${inter.className}`}>
         <NavBar/>
         {children}
       </body>

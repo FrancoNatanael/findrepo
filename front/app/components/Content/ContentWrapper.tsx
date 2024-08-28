@@ -18,7 +18,7 @@ export default function ContentWrapper(){
         if(data) setRepos(data!.items as Array<Repository>)
     }, [data])
 
-    return <div className="flex justify-between">
+    return <div className="flex justify-between py-6 w-[80%] m-auto">
         <SideContent setFilterObject={setFilterObject}/>
         <PrincipalContent repos={repos} loading={loading} setItemsPerPage={setItemsPerPage}/>
     </div>
