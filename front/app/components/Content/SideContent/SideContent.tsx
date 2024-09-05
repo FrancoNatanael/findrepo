@@ -17,6 +17,26 @@ export default function SideContent({setFilterObject} : {setFilterObject: Dispat
         language: "javascript",
         keyword: ""
     })
+    const selectItems = [
+        { value: 'javascript', label: 'Javascript' },
+        { value: 'typescript', label: 'Typescript' },
+        { value: 'csharp', label: 'C#' },
+        { value: 'python', label: 'Python' },
+        { value: 'java', label: 'Java' },
+        { value: 'c++', label: 'C++' },
+        { value: 'ruby', label: 'Ruby' },
+        { value: 'php', label: 'PHP' },
+        { value: 'swift', label: 'Swift' },
+        { value: 'go', label: 'Go' },
+        { value: 'rust', label: 'Rust' },
+        { value: 'kotlin', label: 'Kotlin' },
+        { value: 'r', label: 'R' },
+        { value: 'dart', label: 'Dart' },
+        { value: 'objectivec', label: 'Objective-C' },
+        { value: 'perl', label: 'Perl' },
+        { value: 'scala', label: 'Scala' },
+        { value: 'haskell', label: 'Haskell' },
+      ];
 
     const updateFilters = (value: string, key: string) => {
         const newFilters = {...filters, [key]: value}
@@ -35,24 +55,11 @@ export default function SideContent({setFilterObject} : {setFilterObject: Dispat
                         <SelectValue placeholder="Language" />
                     </SelectTrigger>
                     <SelectContent>
-                        <SelectItem value="javascript">Javascript</SelectItem>
-                        <SelectItem value="typescript">Typescript</SelectItem>
-                        <SelectItem value="csharp">C#</SelectItem>
-                        <SelectItem value="python">Python</SelectItem>
-                        <SelectItem value="java">Java</SelectItem>
-                        <SelectItem value="c++">C++</SelectItem>
-                        <SelectItem value="ruby">Ruby</SelectItem>
-                        <SelectItem value="php">PHP</SelectItem>
-                        <SelectItem value="swift">Swift</SelectItem>
-                        <SelectItem value="go">Go</SelectItem>
-                        <SelectItem value="rust">Rust</SelectItem>
-                        <SelectItem value="kotlin">Kotlin</SelectItem>
-                        <SelectItem value="r">R</SelectItem>
-                        <SelectItem value="dart">Dart</SelectItem>
-                        <SelectItem value="objectivec">Objective-C</SelectItem>
-                        <SelectItem value="perl">Perl</SelectItem>
-                        <SelectItem value="scala">Scala</SelectItem>
-                        <SelectItem value="haskell">Haskell</SelectItem>
+                        {
+                            selectItems.map((item: {value: string, label: string}) => (
+                                <SelectItem value={item.value} key={item.value}>{item.label}</SelectItem>
+                            ))
+                        }
                     </SelectContent>
                 </Select>
             </div>
